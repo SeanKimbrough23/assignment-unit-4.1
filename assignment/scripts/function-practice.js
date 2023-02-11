@@ -103,11 +103,20 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 console.log('isFirstLetter - should say true' , isFirstLetter('k', 'kangaroo'));
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+function sumAll(array) {
+  let numberArray = [0,8,66,43,2,24];
   let sum = 0
+  for (let i=0; i < numberArray.length; i++){
   // TODO: loop to add items
+  sum += numberArray[i]; // I do have a question here: why if I change it to * sum += numberArray[i++] * the answer is 68, I don't understand how it gets 68
+  }
   return sum;
-}
+  }
+
+console.log(sumAll([0,8,66,43,2,24]));
+
+
+
 
 
 
