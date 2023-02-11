@@ -91,33 +91,16 @@ console.log('Value of Array', find(2,2));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-  let letters = (a-z);
-  if (str.length > 0 && str.length < 25) {
-    if (letters.test === isFirstLetter('')){
-      return true;
-    } else 
-    return false;
-  }
+if (string.startsWith(letter, string)){
+  return true;
+}
+else 
+return false;
 }
 
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
-
-//function SearchingChallenge(str) {
- // let onlyLetters = /^[a-zA-Z]+$/;
-  if (str.length > 4 && str.length < 25) {
-    if (onlyLetters.test(str.charAt(0))) {
-      return true;
-    } else {
-      return false;
-    }
-  } else {
-    return false;
-  }
-}
-console.log(SearchingChallenge('Hello World!'));
-console.log(SearchingChallenge('!dlroW olleH'));
-console.log(SearchingChallenge('u__adced_123'));
+console.log('isFirstLetter - should say true' , isFirstLetter('k', 'kangaroo'));
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
