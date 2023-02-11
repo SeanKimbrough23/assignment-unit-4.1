@@ -42,29 +42,48 @@ console.log('The product of 3 numbers', multiplyThree(3,7,5));
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+  else 
+    return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
+console.log( 'isPositive - should say true', isPositive(4) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
 
+function getLast(array){
+  if (array.length>0){
+    return array[array.length-1];
+  }
 }
+console.log (' Return last item in Array', getLast[7,6,4,3,1,10]);
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+let arrayOfNumbers = [2, 14, 8, 26, 0, 52, 7];
+
+function find( value, array ){  
+ for (let i = 0; i < arrayOfNumbers.length; i++){
+    if (value ===arrayOfNumbers[i]){
+       return true;
+     } 
+     else
+  return false;
 }
+}
+
+
+console.log('Value of array' ,find(3,6));
+console.log('Value of Array', find(14,1));
+console.log('Value of Array', find(2,2));
 
 // ----------------------
 // Stretch Goals
@@ -72,10 +91,33 @@ function find( value, array ){
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  let letters = (a-z);
+  if (str.length > 0 && str.length < 25) {
+    if (letters.test === isFirstLetter('')){
+      return true;
+    } else 
+    return false;
+  }
 }
+
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+
+//function SearchingChallenge(str) {
+ // let onlyLetters = /^[a-zA-Z]+$/;
+  if (str.length > 4 && str.length < 25) {
+    if (onlyLetters.test(str.charAt(0))) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+console.log(SearchingChallenge('Hello World!'));
+console.log(SearchingChallenge('!dlroW olleH'));
+console.log(SearchingChallenge('u__adced_123'));
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
@@ -83,6 +125,8 @@ function sumAll( ) {
   // TODO: loop to add items
   return sum;
 }
+
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
