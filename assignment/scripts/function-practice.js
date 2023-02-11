@@ -115,6 +115,8 @@ function sumAll(array) {
 
 console.log(sumAll([0,8,66,43,2,24]));
 
+// cannot figure out how to get it to add new item to array each time
+
 
 
 
@@ -123,9 +125,29 @@ console.log(sumAll([0,8,66,43,2,24]));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+let newArray = [-5, 10, 54, 12, -1, 3];
 
+let positiveArray = newArray.filter(function(num){
+  return num > -1;
+  function getPositives(newArray){
+    const positiveArray = newArray.filter(num => num > -1);
+    return positiveArray;
+}});
+console.log('new array is', positiveArray);
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+// Write a function that takes an integer minutes and converts it to seconds. (from edabit.com)
+
+
+function convert(minutes) {
+  let seconds = minutes * 60;
+  return seconds;
+}
+console.log('Minutes are now seconds',convert(5)); // output: 300 seconds
+console.log('Minutes are now seconds',convert(10)); // output: 600 seconds
+console.log('Minutes are now seconds',convert(60)); //output: 3600 seconds
+
